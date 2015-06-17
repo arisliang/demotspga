@@ -1,0 +1,27 @@
+﻿<Window x:Class="DemoTSP.WPFClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Canvas x:Name="canvas_cities" Width="256" Height="256" Margin="0">
+                <Polyline x:Name="citiesLine" Stroke="DarkGreen" StrokeStartLineCap="Round"
+                          StrokeEndLineCap="Round" StrokeLineJoin="Round" StrokeThickness="3" />
+            </Canvas>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" x:Name="btn_Load" Margin="5" Click="btn_Load_Click">Load Cities</Button>
+            <Button Grid.Column="1" x:Name="btn_Start" Margin="5" Click="btn_Start_Click">Start</Button>
+        </Grid>
+        <TextBlock Grid.Row="2" x:Name="txt_status"></TextBlock>
+    </Grid>
+</Window>
